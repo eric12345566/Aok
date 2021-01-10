@@ -11,6 +11,7 @@ public class Test {
     public static void main(String[] args) throws Exception {
         HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
         server.createContext("/post", new PostHandler());
+        server.createContext("/get/eric", new Get2Handler());
         server.createContext("/get", new GetHandler());
         server.setExecutor(null); // creates a default executor
         server.start();
@@ -30,6 +31,22 @@ public class Test {
     public static class GetHandler implements HttpHandler {
         @Override
         public void handle(HttpExchange httpExchange) throws IOException {
+            System.out.println("Call /get");
+            System.out.println("Method: "+ httpExchange.getRequestMethod());
+            String param = httpExchange.getRequestURI().getQuery();
+            System.out.println("URI: "+httpExchange.getRequestURI());
+            System.out.println("Param:"+ param);
+            httpExchange.sendResponseHeaders(200, 0);
+            OutputStream os = httpExchange.getResponseBody();
+            os.write(param.getBytes());
+            os.close();
+        }
+    }
+
+    public static class Get2Handler implements HttpHandler {
+        @Override
+        public void handle(HttpExchange httpExchange) throws IOException {
+            System.out.println("Call /get/eric");
             System.out.println("Method: "+ httpExchange.getRequestMethod());
             String param = httpExchange.getRequestURI().getQuery();
             System.out.println("URI: "+httpExchange.getRequestURI());
