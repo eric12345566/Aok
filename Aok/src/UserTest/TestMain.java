@@ -15,7 +15,7 @@ public class TestMain {
         // System.out.println(data1.getDataList());
         System.out.println(tv.outPutHTML(data1));
         */
-        Aok aok = new Aok();
-        aok.startServer(8010);
+        Aok aok = new Aok(8010);
+        aok.startServer();
     }
 }

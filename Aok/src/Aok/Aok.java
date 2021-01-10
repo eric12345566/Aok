@@ -12,12 +12,17 @@ import java.util.concurrent.ThreadPoolExecutor;
 public class Aok {
     HttpServer server;
     ArrayList<AokRouter> aokRoutersList = new ArrayList<AokRouter>();
+    int port;
 
-    public void startServer(int port) throws IOException {
+    public Aok(int port) throws IOException {
         ThreadPoolExecutor threadPoolExecutor = (ThreadPoolExecutor) Executors.newFixedThreadPool(10);
+        this.port = port;
 
-        server = HttpServer.create(new InetSocketAddress(port), 0);
+        server = HttpServer.create(new InetSocketAddress(this.port), 0);
         server.setExecutor(threadPoolExecutor); // creates a default executor
+    }
+
+    public void startServer(){
         server.start();
         System.out.println("<AoK> Starting Server at port: " + port);
     }
