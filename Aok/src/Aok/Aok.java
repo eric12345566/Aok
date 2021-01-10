@@ -19,6 +19,7 @@ public class Aok {
         server = HttpServer.create(new InetSocketAddress(port), 0);
         server.setExecutor(threadPoolExecutor); // creates a default executor
         server.start();
+        System.out.println("<AoK> Starting Server at port: " + port);
     }
 
     public void addRouter(String path, AokRouter handler){
