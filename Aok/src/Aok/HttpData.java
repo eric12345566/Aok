@@ -6,10 +6,10 @@ import java.util.Map;
 import com.sun.net.httpserver.Headers;
 
 public class HttpData {
-  String body = null;
-  Headers header;
-  int status = 404;
-  Map<String, String> query;
+  public String body = null;
+  public Headers header;
+  public int status = 404;
+  public Map<String, String> query;
   
   public Map<String, String> queryToMap(String query) {
     Map<String, String> result = new HashMap<>();

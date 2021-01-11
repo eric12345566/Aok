@@ -16,26 +16,27 @@ public class AokRouter implements HttpHandler {
   public void handle(HttpExchange exchange) throws IOException {
     // TODO Auto-generated method stub
     request.header = exchange.getRequestHeaders();
+    response.header = exchange.getResponseHeaders();
 
     if("GET".equals(exchange.getRequestMethod())) {
       if(exchange.getRequestURI().getQuery() != null)
         request.query = request.queryToMap(exchange.getRequestURI().getQuery());
-      response = ctr.Get(request);
+      response = ctr.Get(request, response);
     }
     
     else if("POST".equals(exchange.getRequestMethod())) { 
       request.query = request.queryToMap(is2string(exchange.getRequestBody()));
-      response = ctr.Post(request);
+      response = ctr.Post(request, response);
     }
       
     else if("DELETE".equals(exchange.getRequestMethod())) { 
-      response = ctr.Delete(request);
+      response = ctr.Delete(request, response);
     }
       
     else if("PUT".equals(exchange.getRequestMethod())) { 
-      response = ctr.Put(request);
+      response = ctr.Put(request, response);
     }
-    
+
     exchange.sendResponseHeaders(response.status, response.body.length());
     
 
@@ -44,6 +45,10 @@ public class AokRouter implements HttpHandler {
     outputStream.flush();
     outputStream.close();
     
+  }
+
+  public void setController(AokController ctr){
+    this.ctr = ctr;
   }
   
   private String is2string(InputStream is) throws IOException {
