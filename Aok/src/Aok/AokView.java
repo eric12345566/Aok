@@ -68,6 +68,6 @@ public abstract class AokView {
         return sw.toString();
     }
 
-    public abstract String outPutHTML(Object obj);
+    public abstract String outPutHTML(AokData obj);
 
 }
