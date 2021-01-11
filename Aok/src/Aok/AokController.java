@@ -1,25 +1,28 @@
 package Aok;
 
-import com.sun.net.httpserver.HttpExchange;
-
 public class AokController {
   AokView view = null;
   AokModel model = null;
+  HttpData response = new HttpData();
   
-  public String Get(HttpExchange exchange) {
-    return "404";
+  public HttpData Get(HttpData request) {
+    response.body = view.outPutHTML(model);
+    return response;
   }
   
-  public String Post(HttpExchange exchange) {
-    return "404";
+  public HttpData Post(HttpData request) {
+    response.body = view.outPutHTML(model);
+    return response;
   }
   
-  public String Delete(HttpExchange exchange) {
-    return "404";
+  public HttpData Delete(HttpData request) {
+    response.body = view.outPutHTML(model);
+    return response;
   }
   
-  public String Put(HttpExchange exchange) {
-    return "404";
+  public HttpData Put(HttpData request) {
+    response.body = view.outPutHTML(model);
+    return response;
   }
   
   public void setView(AokView v) {
@@ -29,4 +32,5 @@ public class AokController {
   public void setModel(AokModel m) {
     this.model = m;
   }
+
 }
