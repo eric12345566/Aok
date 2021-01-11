@@ -6,22 +6,22 @@ public class AokController {
   HttpData response = new HttpData();
   
   public HttpData Get(HttpData request) {
-    response.body = view.outPutHTML(model);
+    response.body = "404";
     return response;
   }
   
   public HttpData Post(HttpData request) {
-    response.body = view.outPutHTML(model);
+    response.body = "404";
     return response;
   }
   
   public HttpData Delete(HttpData request) {
-    response.body = view.outPutHTML(model);
+    response.body = "404";
     return response;
   }
   
   public HttpData Put(HttpData request) {
-    response.body = view.outPutHTML(model);
+    response.body = "404";
     return response;
   }
   

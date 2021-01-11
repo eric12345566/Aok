@@ -1,5 +1,6 @@
 package UserTest;
 
+import Aok.AokData;
 import Aok.AokView;
 
 public class TestView extends AokView {
@@ -8,7 +9,7 @@ public class TestView extends AokView {
     }
 
     @Override
-    public String outPutHTML(Object obj) {
+    public String outPutHTML(AokData obj) {
         input.put("title", "Vogella example");
         input.put("exampleObject", obj);
         return getTemplate();

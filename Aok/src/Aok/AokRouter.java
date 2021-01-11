@@ -45,6 +45,10 @@ public class AokRouter implements HttpHandler {
     outputStream.close();
     
   }
+
+  public void setController(AokController ctr){
+    this.ctr = ctr;
+  }
   
   private String is2string(InputStream is) throws IOException {
     final int bufferSize = 1024;
