@@ -1,26 +1,25 @@
 package Aok;
 
 public class AokController {
-  AokView view = null;
-  AokModel model = null;
-  HttpData response = new HttpData();
+  public AokView view = null;
+  public AokModel model = null;
   
-  public HttpData Get(HttpData request) {
+  public HttpData Get(HttpData request, HttpData response) {
     response.body = "404";
     return response;
   }
   
-  public HttpData Post(HttpData request) {
+  public HttpData Post(HttpData request, HttpData response) {
     response.body = "404";
     return response;
   }
   
-  public HttpData Delete(HttpData request) {
+  public HttpData Delete(HttpData request, HttpData response) {
     response.body = "404";
     return response;
   }
   
-  public HttpData Put(HttpData request) {
+  public HttpData Put(HttpData request, HttpData response) {
     response.body = "404";
     return response;
   }
