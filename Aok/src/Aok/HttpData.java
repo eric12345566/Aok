@@ -10,6 +10,7 @@ public class HttpData {
   public Headers header;
   public int status = 404;
   public Map<String, String> query;
+  public ContentType type = null;
   
   public Map<String, String> queryToMap(String query) {
     Map<String, String> result = new HashMap<>();
