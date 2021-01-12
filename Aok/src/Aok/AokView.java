@@ -1,16 +1,15 @@
 package Aok;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 
 import freemarker.template.*;
 
-public abstract class AokView {
+public abstract class AokView implements Observer{
     protected static Configuration cfg;
     protected Map<String, Object> input = new HashMap<String, Object>();
     protected String templateFileName;
+    protected AokData dataObj;
 
     public AokView(String templateFileName){
 
@@ -68,6 +67,13 @@ public abstract class AokView {
         return sw.toString();
     }
 
-    public abstract String outPutHTML(AokData obj);
+    @Override
+    public void update(Observable o, Object arg) {
+        if(arg instanceof AokData){
+            this.dataObj = (AokData) arg;
+        }
+    }
+
+    public abstract String outPutHTML();
 
 }
