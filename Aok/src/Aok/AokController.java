@@ -3,6 +3,13 @@ package Aok;
 public class AokController {
   public AokView view = null;
   public AokModel model = null;
+
+  public AokController(){}
+
+  public AokController(AokModel model, AokView view){
+    this.model = model;
+    this.view = view;
+  }
   
   public HttpData Get(HttpData request, HttpData response) {
     response.body = "404";
@@ -23,7 +30,7 @@ public class AokController {
     response.body = "404";
     return response;
   }
-  
+
   public void setView(AokView v) {
     this.view = v;
   }
@@ -33,7 +40,7 @@ public class AokController {
   }
   
   public String getResponseBody() {
-    return this.view.outPutHTML(this.model.getData());
+    return this.view.outPutHTML();
   }
 
 }
