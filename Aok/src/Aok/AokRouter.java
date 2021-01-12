@@ -36,7 +36,9 @@ public class AokRouter implements HttpHandler {
     else if("PUT".equals(exchange.getRequestMethod())) { 
       response = ctr.Put(request, response);
     }
-
+    
+    setContentType();
+    
     exchange.sendResponseHeaders(response.status, response.body.length());
     
 
@@ -63,6 +65,21 @@ public class AokRouter implements HttpHandler {
         out.append(buffer, 0, rsz);
     }
     return out.toString();
+  }
+  
+  public void setContentType() {
+    if(this.response.type == ContentType.json)
+      response.header.set("Content-Type", "application/json; charset=utf-8");
+    else if(this.response.type == ContentType.html)
+      response.header.set("Content-Type", "text/html; charset=utf-8");
+    else if(this.response.type == ContentType.plain)
+      response.header.set("Content-Type", "text/plain; charset=utf-8");
+    else if(this.response.type == ContentType.jpeg)
+      response.header.set("Content-Type", "image/jpeg; charset=utf-8");
+    else if(this.response.type == ContentType.png )
+      response.header.set("Content-Type", "image/png; charset=utf-8");
+    else if(this.response.type == ContentType.pdf)
+      response.header.set("Content-Type", "application/pdf; charset=utf-8");
   }
   
   

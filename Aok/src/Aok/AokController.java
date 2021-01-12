@@ -31,5 +31,9 @@ public class AokController {
   public void setModel(AokModel m) {
     this.model = m;
   }
+  
+  public String getResponseBody() {
+    return this.view.outPutHTML(this.model.getData());
+  }
 
 }
