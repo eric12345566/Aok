@@ -17,7 +17,10 @@ public class HomeWorkController extends AokController {
 
     @Override
     public HttpData Post(HttpData request, HttpData response) {
-        return super.Post(request, response);
+        this.model.checkedHomework(request.query);
+        response.body = "success";
+        redirector(response, "/homework");
+        return response;
     }
 
     @Override

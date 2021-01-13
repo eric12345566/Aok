@@ -81,6 +81,10 @@ public class DB {
         list.add(new HomeWork(homeWorkName, classNo));
     }
 
+    public void removeHomeWork(String classNo, HomeWork hObj){
+        homeWorkMap.get(classNo).remove(hObj);
+    }
+
     public List<HomeWork> getHomeWork(String classNo){
         return homeWorkMap.get(classNo);
     }

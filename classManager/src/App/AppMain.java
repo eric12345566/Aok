@@ -3,6 +3,9 @@ import Aok.*;
 import App.Curriculum.CurriculumController;
 import App.Curriculum.CurriculumModel;
 import App.Curriculum.CurriculumView;
+import App.Home.HomeController;
+import App.Home.HomeModel;
+import App.Home.HomeView;
 import App.Homework.HomeWorkController;
 import App.Homework.HomeWorkModel;
 import App.Homework.HomeWorkView;
@@ -67,6 +70,18 @@ public class AppMain {
         homeWorkModel.addView(homeWorkView);
         homeWorkRouter.setController(homeWorkController);
         aok.addRouter("/homework", homeWorkRouter);
+
+        /* Home */
+        AokController homeController = new HomeController();
+        AokView homeView = new HomeView("home.ftl");
+        AokModel homeModel = new HomeModel();
+        AokRouter homeRouter = new AokRouter();
+
+        homeController.setModel(homeModel);
+        homeController.setView(homeView);
+        homeModel.addView(homeView);
+        homeRouter.setController(homeController);
+        aok.addRouter("/home", homeRouter);
 
         /* Start App */
         aok.startServer();
