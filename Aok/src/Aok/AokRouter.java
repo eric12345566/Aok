@@ -35,7 +35,6 @@ public class AokRouter implements HttpHandler {
     else if("POST".equals(exchange.getRequestMethod())) {
       request.body = is2string(exchange.getRequestBody());
       if(request.headerMap.get("Content-type").get(0).equalsIgnoreCase("application/x-www-form-urlencoded")) {
-        System.out.println("hello");
         request.query = request.queryToMap(request.body);
       }
       response = ctr.Post(request, response);

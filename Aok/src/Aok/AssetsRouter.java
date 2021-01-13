@@ -48,11 +48,9 @@ public class AssetsRouter extends AokRouter implements HttpHandler{
             System.out.println("Sending data completely.");
         }
 	    else if (fileName.endsWith(".html") ) {
-			System.out.println("hello 1");
 	    	File file = new File(fileName);
         	InputStreamReader read = new InputStreamReader (new FileInputStream(file),"UTF-8");
         	BufferedReader br = new BufferedReader(read);
-        	System.out.println("hello 2");
     		String str = null;
     		String sumStr = "";
     		response.type = ContentType.html;
@@ -63,7 +61,7 @@ public class AssetsRouter extends AokRouter implements HttpHandler{
     		}
     		response.header.set("Content-Type", "text/html; charset=UTF-8");
     		exchange.sendResponseHeaders(response.status, sumStr.getBytes("UTF-8").length);
-    		System.out.println(sumStr);
+    		// System.out.println(sumStr);
 			outputStream.write(sumStr.getBytes("UTF-8"));
     		br.close();
         }
@@ -81,7 +79,7 @@ public class AssetsRouter extends AokRouter implements HttpHandler{
     		}
     		response.header.set("Content-Type", "text/css; charset=UTF-8");
     		exchange.sendResponseHeaders(response.status, sumStr.getBytes("UTF-8").length);
-    		System.out.println(sumStr);
+    		// System.out.println(sumStr);
 			outputStream.write(sumStr.getBytes("UTF-8"));
     		br.close();
         }
@@ -99,7 +97,7 @@ public class AssetsRouter extends AokRouter implements HttpHandler{
     		}
     		response.header.set("Content-Type", "application/x-javascript; charset=UTF-8");
     		exchange.sendResponseHeaders(response.status, sumStr.getBytes("UTF-8").length);
-    		System.out.println(sumStr);
+    		// System.out.println(sumStr);
 			outputStream.write(sumStr.getBytes("UTF-8"));
     		br.close();
         }
