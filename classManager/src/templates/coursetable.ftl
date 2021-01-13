@@ -28,33 +28,28 @@
 <body>
     <nav class="main-navigation">
         <div class="navbar-header animated fadeInUp">
-            <a class="navbar-brand" href="#">Logo Area</a>
+            <a class="navbar-brand" href="#">Aok</a>
         </div>
         <ul class="nav-list">
             <li class="nav-list-item">
-                <a href="#" class="nav-link">Home</a>
+                <a href="/home" class="nav-link">Home</a>
             </li>
             <li class="nav-list-item">
-                <a href="#" class="nav-link">About Us</a>
+                <a href="#" class="nav-link">課表</a>
             </li>
             <li class="nav-list-item">
-                <a href="#" class="nav-link">Blog</a>
+                <a href="/homework" class="nav-link">作業一覽</a>
             </li>
             <li class="nav-list-item">
-                <a href="#" class="nav-link">Works</a>
+                <a href="/score" class="nav-link">成績查詢</a>
             </li>
-            <li class="nav-list-item">
-                <a href="#" class="nav-link">Contact</a>
-            </li>
+            <li class="nav-list-item"></li>
         </ul>
     </nav>
-    <div class="container">
+    <div class="container my-4">
+	<h2>課表</h2>
+	<br>
         <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">課表</h3>
-            </div>
-            <hr>
-            <br>
             <ul class="list-group" style="margin-left: 50px;">
                 <li class="list-group-item">
                     <div class="row toggle" id="dropdown-detail-1" data-toggle="detail-1">
