@@ -1,9 +1,7 @@
 package UserTest;
 
 import Aok.*;
-import DataModel.TestData;
-import DataModel.TestDataModel;
-import DataModel.ValueExampleObject;
+import UserTest.DataModel.TestDataModel;
 
 import java.io.IOException;
 

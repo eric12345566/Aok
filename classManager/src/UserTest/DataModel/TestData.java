@@ -1,19 +1,21 @@
-package DataModel;
+package UserTest.DataModel;
+
+import Aok.AokData;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ValueExampleObject {
+public class TestData extends AokData {
     private String name;
     private String developer;
-    private List<ValueExampleObject> dataList = new ArrayList<ValueExampleObject>();
+    private List<TestData> dataList = new ArrayList<TestData>();
 
-    public ValueExampleObject(String name, String developer) {
+    public TestData(String name, String developer) {
         this.name = name;
         this.developer = developer;
     }
 
-    public void listAdd(ValueExampleObject obj){
+    public void listAdd(TestData obj){
         dataList.add(obj);
     }
 
@@ -25,5 +27,5 @@ public class ValueExampleObject {
         return developer;
     }
 
-    public List<ValueExampleObject> getDataList() {return dataList;};
+    public List<TestData> getDataList() {return dataList;};
 }

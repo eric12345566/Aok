@@ -1,4 +1,4 @@
-package DataModel;
+package UserTest.DataModel;
 
 import Aok.AokData;
 import Aok.AokModel;
