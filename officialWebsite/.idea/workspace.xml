@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcb4dc13-e3a0-444a-ac9a-d64701fe38df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Aok/Aok.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Aok/Aok.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Eric/Eric.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Eric/Eric.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../classManager/Aok.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../classManager/Aok.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../classManager/src/App/Homework/HomeWorkModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../classManager/src/App/Homework/HomeWorkModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classManager/curriculum.db" beforeDir="false" afterPath="$PROJECT_DIR$/../classManager/curriculum.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Assets/doc/aokcontroller.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/doc/aokcontroller.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
