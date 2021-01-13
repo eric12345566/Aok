@@ -18,11 +18,11 @@ public class LoginModel extends AokModel {
         db.addStudent("黃子騰", "m","tw", "1234");
     }
 
-    public int loginStudent(String username, String password){
+    public boolean loginStudent(String username, String password){
         if(db.getStudent(username).password.equals(password)){
-            return 1;
+            return true;
         }else{
-            return -1;
+            return false;
         }
     }
 

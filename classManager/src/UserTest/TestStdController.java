@@ -4,7 +4,7 @@ import Aok.AokController;
 import Aok.AokModel;
 import Aok.ContentType;
 import Aok.HttpData;
-import DataModel.TestDataModel;
+import UserTest.DataModel.TestDataModel;
 
 import java.util.*;
 
