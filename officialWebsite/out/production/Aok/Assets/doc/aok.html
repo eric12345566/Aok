@@ -9,18 +9,17 @@
 		<title>快速建置伺服器 - Aok</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="stylesheet" href="/assets/assets/css/main.css" />
 	</head>
 	<body>
 
 		<!-- Header -->
 			<header id="header">
-				<h1><strong><a href="/index.html">Aok</a></strong></h1>
+				<h1><strong><a href="/assets/index.html">Aok</a></strong></h1>
 				<nav id="nav">
 					<ul>
-						<li><a href="/index.html">首頁</a></li>
-						<li><a href="/doc/index.html">教學</a></li>
-						<li><a href="/elements.html">Elements</a></li>
+						<li><a href="/assets/index.html">首頁</a></li>
+						<li><a href="/assets/doc/index.html">教學</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -36,17 +35,18 @@
 						<p>比喝一杯咖啡還簡單</p>
 					</header>
 
-					<a href="#" class="image fit"><img src="/images/pic01.jpg" alt="" /></a>
-					<p>Vis accumsan feugiat adipiscing nisl amet adipiscing accumsan blandit accumsan sapien blandit ac amet faucibus aliquet placerat commodo. Interdum ante aliquet commodo accumsan vis phasellus adipiscing. Ornare a in lacinia. Vestibulum accumsan ac metus massa tempor. Accumsan in lacinia ornare massa amet. Ac interdum ac non praesent. Cubilia lacinia interdum massa faucibus blandit nullam. Accumsan phasellus nunc integer. Accumsan euismod nunc adipiscing lacinia erat ut sit. Arcu amet. Id massa aliquet arcu accumsan lorem amet accumsan.</p>
-					<pre><code>i = 0;
+					<a href="#" class="image fit"><img src="/assets/images/pic01.jpg" alt="" /></a>
+					<p>使用者可以在很輕易的在我們的服務上開啟一個網頁伺服器，如下</p>
+					<pre><code>
+// 初始化伺服器，輸入 port 號碼
+Aok aok = new Aok(8010);
 
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
+// 註冊 Router
+aok.addRouter("/", testRouter);
+aok.addRouter("/std", test2Router);
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+// 啟動伺服器
+aok.startServer();</code></pre>
 
 				</div>
 			</section>

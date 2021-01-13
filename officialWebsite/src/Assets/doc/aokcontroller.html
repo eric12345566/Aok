@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<!--
+	Spatial by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>快速建置伺服器 - Aok</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/assets/assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1><strong><a href="/assets/index.html">Aok</a></strong></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="/assets/index.html">首頁</a></li>
+						<li><a href="/assets/doc/index.html">教學</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+
+					<header class="major special">
+						<h2>AokController</h2>
+						<p>重新掌握你的框架</p>
+					</header>
+
+					<a href="#" class="image fit"><img src="/assets/images/pic13.jpg" alt="" /></a>
+                    <p>主要負責處理 GET 、POST 、PUT 、DELETE ，這些 HttpMethod被 client 端呼叫時所需做的動作。</p>
+					<p>建構子詳細定義：</p>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>建構子</th>
+                                    <th>說明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>AokController(AokModel model, AokView view)</td>
+                                    <td>給定view和model初值。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>方法詳細定義：</p>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>方法</th>
+                                    <th>說明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Get()、Post()、Delete()、Put()</td>
+                                    <td>處理被呼叫時須執行的動作，使用者可以覆寫此 function 。</td>
+                                </tr>
+                                <tr>
+                                    <td>setView(AokView v)、setModel(AokModel m)</td>
+                                    <td>設定 view 、 model 的值。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-facebook"></a></li>
+						<li><a href="#" class="icon fa-twitter"></a></li>
+						<li><a href="#" class="icon fa-instagram"></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li>
+						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/skel.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<!--
+	Spatial by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>快速建置伺服器 - Aok</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/assets/assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1><strong><a href="/assets/index.html">Aok</a></strong></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="/assets/index.html">首頁</a></li>
+						<li><a href="/assets/doc/index.html">教學</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+
+					<header class="major special">
+						<h2>AokRouter</h2>
+						<p>給你一條通往成功的路</p>
+					</header>
+
+					<a href="#" class="image fit"><img src="/assets/images/pic13.jpg" alt="" /></a>
+                    <p>主要負責處理靜態檔案，檔案路徑預設在該project下層的資料夾下(AoK/src/Assets/檔案名稱)，像是html、css、jpg….等型態的檔案。</p>
+					<p>方法詳細定義：</p>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>方法</th>
+                                    <th>說明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>handle(HttpExchange exchange)</td>
+                                    <td>為實作 HttpHandler 的方法，當路由接收到請求的處理演算法在此方法中定義。其中使用 AokController 作為 Stretagy。其中的 HTTP Method 演算法由 AokController 提供。</td>
+                                </tr>
+                                <tr>
+                                    <td>setController(AokController ctr)</td>
+                                    <td>設定 Controller 屬性。</td>
+                                </tr>
+                                <tr>
+                                    <td>setContentType()</td>
+                                    <td>根據 response 屬性，可以知道此次返回的 Content Type 為何，並且賦予適當的header，讓Server可以成功執行。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-facebook"></a></li>
+						<li><a href="#" class="icon fa-twitter"></a></li>
+						<li><a href="#" class="icon fa-instagram"></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li>
+						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/skel.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -31,23 +31,37 @@
 				<div class="container">
 
 					<header class="major special">
-						<h2>如何快速建置伺服器</h2>
-						<p>比喝一杯咖啡還簡單</p>
+						<h2>AokModel</h2>
+						<p>有「模」有樣</p>
 					</header>
 
-					<a href="#" class="image fit"><img src="/assets/images/pic01.jpg" alt="" /></a>
-					<p>使用者可以在很輕易的在我們的服務上開啟一個網頁伺服器，如下</p>
-					<pre><code>
-// 初始化伺服器，輸入 port 號碼
-Aok aok = new Aok(8010);
-
-// 註冊 Router
-aok.addRouter("/", testRouter);
-aok.addRouter("/std", test2Router);
-
-// 啟動伺服器
-aok.startServer();</code></pre>
-
+					<a href="#" class="image fit"><img src="/assets/images/pic15.jpg" alt="" /></a>
+                    <p>處理相關在網頁上所需要的相關Data Type以及商業邏輯，實作observable被View所觀察</p>
+                    <p>方法詳細定義：</p>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>方法</th>
+                                    <th>說明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>addView(AokView view)</td>
+                                    <td>將 觀察者View 與 Model 綁定。</td>
+                                </tr>
+                                <tr>
+                                    <td>sendDataToView()</td>
+                                    <td>當 Model 更動時透過 sendDataToView 呼叫View 的 updata。</td>
+                                </tr>
+                                <tr>
+                                    <td>generateAokData()</td>
+                                    <td>生成一個AokData物件。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 				</div>
 			</section>
 

@@ -20,7 +20,6 @@
 					<ul>
 						<li><a href="/index.html">首頁</a></li>
 						<li><a href="/doc/index.html">教學</a></li>
-						<li><a href="/elements.html">Elements</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -32,23 +31,37 @@
 				<div class="container">
 
 					<header class="major special">
-						<h2>如何快速建置伺服器</h2>
-						<p>比喝一杯咖啡還簡單</p>
+						<h2>AokData</h2>
+						<p>資料處理好幫手</p>
 					</header>
 
-					<a href="#" class="image fit"><img src="/images/pic01.jpg" alt="" /></a>
-					<p>使用者可以在很輕易的在我們的服務上開啟一個網頁伺服器，如下</p>
-					<pre><code>
-// 初始化伺服器，輸入 port 號碼
-Aok aok = new Aok(8010);
-
-// 註冊 Router
-aok.addRouter("/", testRouter);
-aok.addRouter("/std", test2Router);
-
-// 啟動伺服器
-aok.startServer();</code></pre>
-
+					<a href="#" class="image fit"><img src="/images/pic16.jpg" alt="" /></a>
+                    <p>主要負責傳輸資料編碼與解碼的動作。</p>
+                    <p>方法詳細定義：</p>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>方法</th>
+                                    <th>說明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>mapToPostString()</td>
+                                    <td>把 POST 接收到的 map 資料轉換成可處理的 String 型態。</td>
+                                </tr>
+                                <tr>
+                                    <td>jsonEncode()</td>
+                                    <td>把使用者使用到的資料轉換成 json 型態。</td>
+                                </tr>
+                                <tr>
+                                    <td>StringEncode()</td>
+                                    <td>把使用者使用到的資料轉換成 String 型態。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 				</div>
 			</section>
 
