@@ -7,8 +7,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 public class DB {
-
-
     public static DB db;
     Map<String, Student> studentMap = new HashMap<>();
     Connection c = null;
@@ -24,7 +22,6 @@ public class DB {
         try {
             Class.forName("org.sqlite.JDBC");
             c = DriverManager.getConnection("jdbc:sqlite:curriculum.db");
-            System.out.println("Opened database successfully");
             stmt = c.createStatement();
 
             if(!(c.getMetaData().getTables(null, null,  "ClASS", null ).next()))
@@ -55,7 +52,6 @@ public class DB {
             Class.forName("org.sqlite.JDBC");
             c = DriverManager.getConnection("jdbc:sqlite:curriculum.db");
             c.setAutoCommit(false);
-            System.out.println("Opened database successfully");
 
             stmt = c.createStatement();
             String sql = "INSERT INTO CLASS (USERNAME,NAME,GENDER,PASSWORD) " +
@@ -81,7 +77,6 @@ public class DB {
             Class.forName("org.sqlite.JDBC");
             c = DriverManager.getConnection("jdbc:sqlite:curriculum.db");
             c.setAutoCommit(false);
-            System.out.println("Opened database successfully");
 
 
             stmt = c.createStatement();
