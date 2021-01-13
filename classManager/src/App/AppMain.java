@@ -13,13 +13,13 @@ public class AppMain {
 
         /* Login */
         AokController loginController = new LoginController();
-        // AokView loginView = new LoginView();
+        AokView loginView = new LoginView("login.html");
         AokModel loginModel = new LoginModel();
         AokRouter loginRouter = new AokRouter();
 
         loginController.setModel(loginModel);
-        // loginController.setView();
-        // loginModel.addView();
+        loginController.setView(loginView);
+        loginModel.addView(loginView);
         loginRouter.setController(loginController);
         aok.addRouter("/login", loginRouter);
 

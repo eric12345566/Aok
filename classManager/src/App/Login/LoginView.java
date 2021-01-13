@@ -10,6 +10,6 @@ public class LoginView extends AokView {
 
     @Override
     public String outPutHTML() {
-        return null;
+        return getTemplate();
     }
 }

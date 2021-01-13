@@ -9,7 +9,7 @@ public class LoginController extends AokController {
     protected LoginModel model;
     @Override
     public HttpData Get(HttpData request, HttpData response) {
-        response.body = "this is login page";
+        response.body = this.getResponseBody();
         return response;
     }
 
