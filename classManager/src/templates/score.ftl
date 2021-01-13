@@ -18,29 +18,27 @@
 <body>
     <nav class="main-navigation">
         <div class="navbar-header animated fadeInUp">
-            <a class="navbar-brand" href="#">Logo Area</a>
+            <a class="navbar-brand" href="#">Aok</a>
         </div>
         <ul class="nav-list">
             <li class="nav-list-item">
-                <a href="#" class="nav-link">Home</a>
+                <a href="/home" class="nav-link">Home</a>
             </li>
             <li class="nav-list-item">
-                <a href="#" class="nav-link">About Us</a>
+                <a href="/curriculum" class="nav-link">課表</a>
             </li>
             <li class="nav-list-item">
-                <a href="#" class="nav-link">Blog</a>
+                <a href="/homework" class="nav-link">作業一覽</a>
             </li>
             <li class="nav-list-item">
-                <a href="#" class="nav-link">Works</a>
+                <a href="#" class="nav-link">成績查詢</a>
             </li>
-            <li class="nav-list-item">
-                <a href="#" class="nav-link">Contact</a>
-            </li>
+            <li class="nav-list-item"></li>
         </ul>
     </nav>
-    <div class="container"  style="margin-top: 30px;">
+    <div class="container my-4">
+	<h2>成績查詢</h2>
         <div class="row">
-            <h2>成績查詢</h2>
             <div class="col-12" style="margin-top: 30px;">
                 <div class="card">
                     <div class="card-body p-0">
@@ -50,9 +48,6 @@
                                 <p class="mb-1">姓名：${scores.student.name}</p>
                                 <p class="mb-1">學號：${scores.student.id}</p>
                                 <p class="mb-1">班級：${scores.student.classNo}</p>
-                            </div>
-                            <div class="col-md-6 text-right">
-                                <p class="font-weight-bold mb-4">Payment Details</p>
                             </div>
                         </div>
                         <div class="row p-5">
@@ -85,18 +80,18 @@
                         </div>
                         <div class="d-flex flex-row-reverse bg-dark text-white p-4">
                             <div class="py-3 px-5 text-right">
-                                <div class="mb-2">Grand Total</div>
-                                <div class="h2 font-weight-light">$234,234</div>
+                                <div class="mb-2">累計系排百分比</div>
+                                <div class="h2 font-weight-light">1%</div>
                             </div>
     
                             <div class="py-3 px-5 text-right">
-                                <div class="mb-2">Discount</div>
-                                <div class="h2 font-weight-light">10%</div>
+                                <div class="mb-2">累計系排</div>
+                                <div class="h2 font-weight-light">1</div>
                             </div>
     
                             <div class="py-3 px-5 text-right">
-                                <div class="mb-2">Sub - Total amount</div>
-                                <div class="h2 font-weight-light">$32,432</div>
+                                <div class="mb-2">系排名</div>
+                                <div class="h2 font-weight-light">1</div>
                             </div>
                         </div>
                     </div>
