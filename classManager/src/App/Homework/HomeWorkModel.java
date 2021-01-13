@@ -15,6 +15,8 @@ public class HomeWorkModel extends AokModel {
         this.db = DB.getInstance();
         this.db.addHomeWork("資訊三丙", "物件導向專題");
         this.db.addHomeWork("資訊三丙", "Design Pattern");
+        this.db.addHomeWork("資訊三丙", "程式設計");
+        this.db.addHomeWork("資訊三丙", "iOS");
     }
 
     public boolean checkedHomework(Map<String, String> map){

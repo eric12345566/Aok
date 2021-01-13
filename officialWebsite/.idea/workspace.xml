@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcb4dc13-e3a0-444a-ac9a-d64701fe38df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../classManager/src/Assets/css/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/../classManager/src/Assets/css/navbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../classManager/src/templates/coursetable.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../classManager/src/templates/coursetable.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../classManager/src/templates/homework.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../classManager/src/templates/homework.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../classManager/src/templates/score.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../classManager/src/templates/score.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Aok/Aok.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Aok/Aok.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Eric/Eric.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Eric/Eric.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classManager/Aok.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../classManager/Aok.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classManager/src/App/Homework/HomeWorkModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../classManager/src/App/Homework/HomeWorkModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
