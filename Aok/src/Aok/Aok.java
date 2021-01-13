@@ -10,9 +10,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
 public class Aok {
-    HttpServer server;
-    ArrayList<AokRouter> aokRoutersList = new ArrayList<AokRouter>();
-    int port;
+    private HttpServer server;
+    private ArrayList<AokRouter> aokRoutersList = new ArrayList<AokRouter>();
+    private int port;
 
     public Aok(int port) throws IOException {
         ThreadPoolExecutor threadPoolExecutor = (ThreadPoolExecutor) Executors.newFixedThreadPool(10);

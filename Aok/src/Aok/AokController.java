@@ -1,8 +1,8 @@
 package Aok;
 
 public class AokController {
-  public AokView view = null;
-  public AokModel model = null;
+  protected AokView view = null;
+  protected AokModel model = null;
 
   public AokController(){}
 
