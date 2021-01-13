@@ -4,7 +4,7 @@ import java.util.Observable;
 
 public abstract class AokModel extends Observable {
 
-    public abstract AokData generateAokData();
+    public abstract Object generateAokData();
 
     public AokModel(){}
 

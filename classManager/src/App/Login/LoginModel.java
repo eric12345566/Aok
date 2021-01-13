@@ -12,14 +12,14 @@ public class LoginModel extends AokModel {
         this.db = DB.getInstance();
 
         // fake data
-        db.addStudent("施冠彰", "m", "eric", "1234");
-        db.addStudent("楊依辰", "f","tina", "1234");
-        db.addStudent("戎宥杰", "m","rj", "1234");
-        db.addStudent("黃子騰", "m","tw", "1234");
+        db.addStudent("施冠彰", "m", "eric", "1234", "資訊三丙");
+        db.addStudent("楊依辰", "f","tina", "1234", "資訊三丙");
+        db.addStudent("戎宥杰", "m","rj", "1234", "資訊三丙");
+        db.addStudent("黃子騰", "m","tw", "1234", "資訊三丙");
     }
 
     public boolean loginStudent(String username, String password){
-        if(db.getStudent(username).password.equals(password)){
+        if(db.getStudent(username) != null && db.getStudent(username).password.equals(password)){
             return true;
         }else{
             return false;

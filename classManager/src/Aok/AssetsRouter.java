@@ -48,11 +48,9 @@ public class AssetsRouter extends AokRouter implements HttpHandler{
             System.out.println("Sending data completely.");
         }
 	    else if (fileName.endsWith(".html") ) {
-			System.out.println("hello 1");
 	    	File file = new File(fileName);
         	InputStreamReader read = new InputStreamReader (new FileInputStream(file),"UTF-8");
         	BufferedReader br = new BufferedReader(read);
-        	System.out.println("hello 2");
     		String str = null;
     		String sumStr = "";
     		response.type = ContentType.html;
