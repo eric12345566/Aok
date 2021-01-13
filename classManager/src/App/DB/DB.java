@@ -66,4 +66,23 @@ public class DB {
         return scoreMap.get(id);
     }
 
+    /* HomeWork */
+    Map<String, List<HomeWork>> homeWorkMap = new HashMap<>();
+
+    public void addHomeWork(String classNo, String homeWorkName){
+        List<HomeWork> list;
+        if(homeWorkMap.containsKey(classNo)){
+            list = homeWorkMap.get(classNo);
+        }else{
+            list = new ArrayList<HomeWork>();
+            homeWorkMap.put(classNo, list);
+        }
+
+        list.add(new HomeWork(homeWorkName, classNo));
+    }
+
+    public List<HomeWork> getHomeWork(String classNo){
+        return homeWorkMap.get(classNo);
+    }
+
 }
