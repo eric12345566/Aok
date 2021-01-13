@@ -7,11 +7,11 @@ body {
 a.navbar-brand {
     float: left;
     height: 50px;
-    padding: 15px 15px;
-    font-size: 18px;
+    padding: 25px 15px;
+    font-size: 30px;
     line-height: 20px;
     text-decoration: none;
-    color: orangered;
+    color: rgb(28, 155, 138);
     font-family: cursive;
     font-weight: 700;
 
@@ -73,23 +73,23 @@ a.nav-link {
 }
 
 .nav-list li:nth-child(1) {
-    animation-delay: .3s;
+    animation-delay: .1s;
 }
 
 .nav-list li:nth-child(2) {
-    animation-delay: .6s;
+    animation-delay: .2s;
 }
 
 .nav-list li:nth-child(3) {
-    animation-delay: .9s;
+    animation-delay: .3s;
 }
 
 .nav-list li:nth-child(4) {
-    animation-delay: 1.2s;
+    animation-delay: .4s;
 }
 
 .nav-list li:nth-child(5) {
-    animation-delay: 1.5s;
+    animation-delay: .5s;
 }
 
 /* Animation */

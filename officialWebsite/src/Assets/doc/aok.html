@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<!--
+	Spatial by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>快速建置伺服器 - Aok</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/assets/assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1><strong><a href="/assets/index.html">Aok</a></strong></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="/assets/index.html">首頁</a></li>
+						<li><a href="/assets/doc/index.html">教學</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+
+					<header class="major special">
+						<h2>如何快速建置伺服器</h2>
+						<p>比喝一杯咖啡還簡單</p>
+					</header>
+
+					<a href="#" class="image fit"><img src="/assets/images/pic01.jpg" alt="" /></a>
+					<p>使用者可以在很輕易的在我們的服務上開啟一個網頁伺服器，如下</p>
+					<pre><code>
+// 初始化伺服器，輸入 port 號碼
+Aok aok = new Aok(8010);
+
+// 註冊 Router
+aok.addRouter("/", testRouter);
+aok.addRouter("/std", test2Router);
+
+// 啟動伺服器
+aok.startServer();</code></pre>
+
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-facebook"></a></li>
+						<li><a href="#" class="icon fa-twitter"></a></li>
+						<li><a href="#" class="icon fa-instagram"></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li>
+						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/skel.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>

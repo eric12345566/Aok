@@ -21,11 +21,9 @@ public class LoginController extends AokController {
             response.body = "success";
             redirector(response, "/home");
         }else{
-            System.out.println("hello");
             response.body = "fail";
             redirector(response, "/login");
         }
-        System.out.println("Username:" + username + "password: "+password);
         return response;
     }
 

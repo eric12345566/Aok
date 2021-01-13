@@ -16,30 +16,27 @@
 </head>
 <body>
   <nav class="main-navigation">
-    <div class="navbar-header animated fadeInUp">
-        <a class="navbar-brand" href="#">Logo Area</a>
-    </div>
-    <ul class="nav-list">
-        <li class="nav-list-item">
-            <a href="#" class="nav-link">Home</a>
-        </li>
-        <li class="nav-list-item">
-            <a href="#" class="nav-link">About Us</a>
-        </li>
-        <li class="nav-list-item">
-            <a href="#" class="nav-link">Blog</a>
-        </li>
-        <li class="nav-list-item">
-            <a href="#" class="nav-link">Works</a>
-        </li>
-        <li class="nav-list-item">
-            <a href="#" class="nav-link">Contact</a>
-        </li>
-    </ul>
-</nav>
+        <div class="navbar-header animated fadeInUp">
+            <a class="navbar-brand" href="#">Aok</a>
+        </div>
+        <ul class="nav-list">
+            <li class="nav-list-item">
+                <a href="/home" class="nav-link">Home</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="/curriculum" class="nav-link">課表</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="#" class="nav-link">作業一覽</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="/score" class="nav-link">成績查詢</a>
+            </li>
+            <li class="nav-list-item"></li>
+        </ul>
+    </nav>
     <div class="container my-4">
       <h2>功課列表</h2>
-        <p class="font-weight-bold">當週作業及代辦事項清單</p>
         <form name="form1" method="post" action="/homework">
         <ul class="list-group list-group-flush">
           <br>

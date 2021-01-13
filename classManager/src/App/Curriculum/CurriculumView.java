@@ -10,7 +10,6 @@ public class CurriculumView extends AokView {
 
     @Override
     public String outPutHTML() {
-        System.out.println(this.dataObj);
         input.put("data", this.dataObj);
         return getTemplate();
     }
