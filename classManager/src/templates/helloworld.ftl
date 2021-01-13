@@ -5,7 +5,7 @@
 <body>
   <h1>${title}</h1>
 
-  <p>${exampleObject.name} by ${exampleObject.developer}</p>
+  <p>${exampleObject.name} by 你好 ${exampleObject.developer}</p>
 
   <ul>
     <#list exampleObject.dataList as system>

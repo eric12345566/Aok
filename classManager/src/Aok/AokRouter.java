@@ -5,6 +5,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.Reader;
+import java.nio.charset.StandardCharsets;
+
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
@@ -24,7 +26,8 @@ public class AokRouter implements HttpHandler {
       response = ctr.Get(request, response);
     }
     
-    else if("POST".equals(exchange.getRequestMethod())) { 
+    else if("POST".equals(exchange.getRequestMethod())) {
+      request.body = is2string(exchange.getRequestBody());
       request.query = request.queryToMap(is2string(exchange.getRequestBody()));
       response = ctr.Post(request, response);
     }
@@ -38,12 +41,10 @@ public class AokRouter implements HttpHandler {
     }
     
     setContentType();
-    
-    exchange.sendResponseHeaders(response.status, response.body.length());
-    
+    exchange.sendResponseHeaders(response.status, response.body.getBytes(StandardCharsets.UTF_8).length);
 
     OutputStream outputStream = exchange.getResponseBody();
-    outputStream.write(response.body.getBytes());
+    outputStream.write(response.body.getBytes(StandardCharsets.UTF_8));
     outputStream.flush();
     outputStream.close();
     

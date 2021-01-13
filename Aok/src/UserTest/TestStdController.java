@@ -13,4 +13,10 @@ public class TestStdController extends AokController {
         response.type = ContentType.html;
         return response;
     }
+
+    @Override
+    public HttpData Post(HttpData request, HttpData response) {
+        System.out.println("Request body: " + request.body);
+        return super.Post(request, response);
+    }
 }

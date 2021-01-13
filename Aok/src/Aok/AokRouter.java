@@ -24,7 +24,8 @@ public class AokRouter implements HttpHandler {
       response = ctr.Get(request, response);
     }
     
-    else if("POST".equals(exchange.getRequestMethod())) { 
+    else if("POST".equals(exchange.getRequestMethod())) {
+      request.body = is2string(exchange.getRequestBody());
       request.query = request.queryToMap(is2string(exchange.getRequestBody()));
       response = ctr.Post(request, response);
     }
