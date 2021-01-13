@@ -1,15 +1,9 @@
 package Aok;
 
-public class AokController {
+public abstract class AokController {
   protected AokView view = null;
-  protected AokModel model = null;
 
   public AokController(){}
-
-  public AokController(AokModel model, AokView view){
-    this.model = model;
-    this.view = view;
-  }
   
   public HttpData Get(HttpData request, HttpData response) {
     response.body = "404";
@@ -35,9 +29,7 @@ public class AokController {
     this.view = v;
   }
   
-  public void setModel(AokModel m) {
-    this.model = m;
-  }
+  public abstract void setModel(AokModel m);
   
   public String getResponseBody() {
     return this.view.outPutHTML();

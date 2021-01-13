@@ -1,12 +1,15 @@
 package UserTest;
 
 import Aok.AokController;
+import Aok.AokModel;
 import Aok.ContentType;
 import Aok.HttpData;
+import DataModel.TestDataModel;
 
 import java.util.*;
 
 public class TestStdController extends AokController {
+    TestDataModel model;
     @Override
     public HttpData Get(HttpData request, HttpData response) {
         this.model.sendDataToView();
@@ -24,6 +27,11 @@ public class TestStdController extends AokController {
         System.out.println(request.query.get("name"));
         response.body = "你好";
         return response;
+    }
+
+    @Override
+    public void setModel(AokModel m) {
+        this.model = (TestDataModel) m;
     }
 
     public Map<String, List<String>> setToMap(Set set) {
