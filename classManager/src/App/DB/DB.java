@@ -5,15 +5,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import java.sql.ResultSet;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
 public class DB {
     public static DB db;
     Map<String, Student> studentMap = new HashMap<>();
-    Connection c = null;
-    Statement stmt = null;
+
     public static DB getInstance(){
         if(db == null){
             db = new DB();
@@ -21,11 +16,7 @@ public class DB {
         return db;
     }
 
-    private DB(){
-        try {
-            Class.forName("org.sqlite.JDBC");
-            c = DriverManager.getConnection("jdbc:sqlite:curriculum.db");
-            stmt = c.createStatement();
+    private DB(){}
 
 
     /* Student Data */
@@ -34,37 +25,7 @@ public class DB {
     }
 
     public Student getStudent(String username){
-        String userName=null;
-        String name=null;
-        String gender=null;
-        String password=null;
-        try {
-            Class.forName("org.sqlite.JDBC");
-            c = DriverManager.getConnection("jdbc:sqlite:curriculum.db");
-            c.setAutoCommit(false);
-
-
-            stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery( "SELECT * FROM CLASS WHERE USERNAME="+username+";" );
-
-                if(rs.next()) {
-                    userName = rs.getString("USERNAME");
-                    name = rs.getString("NAME");
-                    gender = rs.getString("GENDER");
-                    password = rs.getString("PASSWORD");
-                }
-
-            rs.close();
-            stmt.close();
-            c.close();
-        } catch ( Exception e ) {
-            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-            System.exit(0);
-        }
-        if (username!=null) {
-            return new Student(name, gender, userName, password);
-        }
-        return new Student(null,null,null,null);
+        return studentMap.get(username);
     }
 
 
