@@ -12,7 +12,7 @@
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="navbar.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/navbar.css" />
     <title>課表查詢</title>
     <script>
         $(document).ready(function() {
@@ -67,6 +67,9 @@
                             <div class="fluid-row">
                                 <#list data.week1 as w1> 
                                     <div class="col-xs-1">
+                                        ${w1_index+1}
+                                    </div>
+                                    <div class="col-xs-5">
                                         ${w1.subjectName}
                                     </div>
                                 </#list>
@@ -75,16 +78,21 @@
                     </div>
                 </li>
                 <li class="list-group-item">
-                    <div class="row toggle" id="dropdown-detail-2" data-toggle="detail-2">
-                        <div class="col-md-10"> 星期二 </div>
+                    <dxiv class="row toggle" id="dropdown-detail-2" data-toggle="detail-2">
+                        <div class="col-md-10">
+                            星期二
+                        </div>
                         <div class="col-md-2"><i class="fa fa-chevron-down fa-pull-right fa-border"></i></div>
-                    </div>
-                    <div id="detail-1">
+                    </dxiv>
+                    <div id="detail-2">
                         <hr>
                         <div class="container">
                             <div class="fluid-row">
                                 <#list data.week2 as w2> 
                                     <div class="col-xs-1">
+                                        ${w2_index+1}
+                                    </div>
+                                    <div class="col-xs-5">
                                         ${w2.subjectName}
                                     </div>
                                 </#list>
@@ -94,16 +102,21 @@
                 </li>
                 <li class="list-group-item">
                     <div class="row toggle" id="dropdown-detail-3" data-toggle="detail-3">
-                        <div class="col-md-10"> 星期三 </div>
+                        <div class="col-md-10">
+                            星期三
+                        </div>
                         <div class="col-md-2"><i class="fa fa-chevron-down fa-pull-right fa-border"></i></div>
                     </div>
-                    <div id="detail-1">
+                    <div id="detail-3">
                         <hr>
                         <div class="container">
                             <div class="fluid-row">
-                                <#list data.week3 as week3> 
+                                <#list data.week3 as w3> 
                                     <div class="col-xs-1">
-                                        ${week3.subjectName}
+                                        ${w3_index+1}
+                                    </div>
+                                    <div class="col-xs-5">
+                                        ${w3.subjectName}
                                     </div>
                                 </#list>
                             </div>
@@ -112,16 +125,21 @@
                 </li>
                 <li class="list-group-item">
                     <div class="row toggle" id="dropdown-detail-4" data-toggle="detail-4">
-                        <div class="col-md-10"> 星期四 </div>
+                        <div class="col-md-10">
+                            星期四
+                        </div>
                         <div class="col-md-2"><i class="fa fa-chevron-down fa-pull-right fa-border"></i></div>
                     </div>
-                    <div id="detail-1">
+                    <div id="detail-4">
                         <hr>
                         <div class="container">
                             <div class="fluid-row">
-                                <#list data.week4 as week4> 
+                                <#list data.week4 as w4> 
                                     <div class="col-xs-1">
-                                        ${week4.subjectName}
+                                        ${w4_index+1}
+                                    </div>
+                                    <div class="col-xs-5">
+                                        ${w4.subjectName}
                                     </div>
                                 </#list>
                             </div>
@@ -130,16 +148,21 @@
                 </li>
                 <li class="list-group-item">
                     <div class="row toggle" id="dropdown-detail-5" data-toggle="detail-5">
-                        <div class="col-md-10"> 星期五 </div>
+                        <div class="col-md-10">
+                            星期五
+                        </div>
                         <div class="col-md-2"><i class="fa fa-chevron-down fa-pull-right fa-border"></i></div>
                     </div>
-                    <div id="detail-1">
+                    <div id="detail-5">
                         <hr>
                         <div class="container">
                             <div class="fluid-row">
-                                <#list data.week5 as week5> 
+                                <#list data.week5 as w5> 
                                     <div class="col-xs-1">
-                                        ${week5.subjectName}
+                                        ${w5_index+1}
+                                    </div>
+                                    <div class="col-xs-5">
+                                        ${w5.subjectName}
                                     </div>
                                 </#list>
                             </div>
