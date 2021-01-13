@@ -9,8 +9,8 @@ public class LoginController extends AokController {
     protected LoginModel model;
     @Override
     public HttpData Get(HttpData request, HttpData response) {
-
-        return super.Get(request, response);
+        response.body = "this is login page";
+        return response;
     }
 
     @Override
@@ -23,6 +23,7 @@ public class LoginController extends AokController {
             redirector(response, "/home");
         }else{
             response.body = "fail";
+            redirector(response, "/login");
         }
 
         return response;

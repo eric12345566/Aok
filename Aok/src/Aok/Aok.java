@@ -20,6 +20,8 @@ public class Aok {
 
         server = HttpServer.create(new InetSocketAddress(this.port), 0);
         server.setExecutor(null); // creates a default executor
+
+        server.createContext("/assets", new AssetsRouter());
     }
 
     public void startServer(){
