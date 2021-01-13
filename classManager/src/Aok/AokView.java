@@ -9,7 +9,7 @@ public abstract class AokView implements Observer{
     protected static Configuration cfg;
     protected Map<String, Object> input = new HashMap<String, Object>();
     protected String templateFileName;
-    protected AokData dataObj;
+    protected Object dataObj;
 
     public AokView(String templateFileName){
 
@@ -69,9 +69,7 @@ public abstract class AokView implements Observer{
 
     @Override
     public void update(Observable o, Object arg) {
-        if(arg instanceof AokData){
-            this.dataObj = (AokData) arg;
-        }
+        this.dataObj = arg;
     }
 
     public abstract String outPutHTML();
