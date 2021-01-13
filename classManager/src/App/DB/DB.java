@@ -8,10 +8,6 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 public class DB {
 
-    public static void main(String[] args) {
-        DB db = DB.getInstance();
-        db.getStudent("1234");
-    }
 
     public static DB db;
     Map<String, Student> studentMap = new HashMap<>();
