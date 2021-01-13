@@ -19,7 +19,7 @@ public class LoginModel extends AokModel {
     }
 
     public boolean loginStudent(String username, String password){
-        if(db.getStudent(username).password.equals(password)){
+        if(db.getStudent(username) != null && db.getStudent(username).password.equals(password)){
             return true;
         }else{
             return false;

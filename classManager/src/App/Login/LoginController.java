@@ -17,15 +17,15 @@ public class LoginController extends AokController {
     public HttpData Post(HttpData request, HttpData response) {
         String username = request.query.get("username");
         String password = request.query.get("password");
-
         if(this.model.loginStudent(username, password)){
             response.body = "success";
             redirector(response, "/home");
         }else{
+            System.out.println("hello");
             response.body = "fail";
             redirector(response, "/login");
         }
-
+        System.out.println("Username:" + username + "password: "+password);
         return response;
     }
 
