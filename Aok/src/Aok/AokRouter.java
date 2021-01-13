@@ -5,6 +5,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.Reader;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
+
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
@@ -14,9 +17,14 @@ public class AokRouter implements HttpHandler {
   HttpData response = new HttpData();
   @Override
   public void handle(HttpExchange exchange) throws IOException {
+    request = new HttpData();
+    response = new HttpData();
+
     // TODO Auto-generated method stub
     request.header = exchange.getRequestHeaders();
     response.header = exchange.getResponseHeaders();
+
+    request.headerMap = setToMap(request.header.entrySet());
 
     if("GET".equals(exchange.getRequestMethod())) {
       if(exchange.getRequestURI().getQuery() != null)
@@ -26,25 +34,30 @@ public class AokRouter implements HttpHandler {
     
     else if("POST".equals(exchange.getRequestMethod())) {
       request.body = is2string(exchange.getRequestBody());
-      request.query = request.queryToMap(is2string(exchange.getRequestBody()));
+      if(request.headerMap.get("Content-type").get(0).equalsIgnoreCase("application/x-www-form-urlencoded")) {
+        System.out.println("hello");
+        request.query = request.queryToMap(request.body);
+      }
       response = ctr.Post(request, response);
     }
       
-    else if("DELETE".equals(exchange.getRequestMethod())) { 
+    else if("DELETE".equals(exchange.getRequestMethod())) {
+      request.body = is2string(exchange.getRequestBody());
       response = ctr.Delete(request, response);
     }
       
-    else if("PUT".equals(exchange.getRequestMethod())) { 
+    else if("PUT".equals(exchange.getRequestMethod())) {
+      request.body = is2string(exchange.getRequestBody());
       response = ctr.Put(request, response);
     }
     
     setContentType();
     
-    exchange.sendResponseHeaders(response.status, response.body.length());
+    exchange.sendResponseHeaders(response.status, response.body.getBytes(StandardCharsets.UTF_8).length);
     
 
     OutputStream outputStream = exchange.getResponseBody();
-    outputStream.write(response.body.getBytes());
+    outputStream.write(response.body.getBytes(StandardCharsets.UTF_8));
     outputStream.flush();
     outputStream.close();
     
@@ -66,6 +79,16 @@ public class AokRouter implements HttpHandler {
         out.append(buffer, 0, rsz);
     }
     return out.toString();
+  }
+
+  public Map<String, List<String>> setToMap(Set set) {
+    Iterator<Map.Entry<String, List<String>>> itr = set.iterator();
+    Map<String, List<String>> map = new HashMap<>();
+    while(itr.hasNext()){
+      Map.Entry<String, List<String>> entry = itr.next();
+      map.put(entry.getKey(), entry.getValue());
+    }
+    return map;
   }
   
   public void setContentType() {

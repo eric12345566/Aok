@@ -19,7 +19,7 @@ public class Aok {
         this.port = port;
 
         server = HttpServer.create(new InetSocketAddress(this.port), 0);
-        server.setExecutor(threadPoolExecutor); // creates a default executor
+        server.setExecutor(null); // creates a default executor
     }
 
     public void startServer(){
