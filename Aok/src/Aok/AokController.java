@@ -35,4 +35,9 @@ public abstract class AokController {
     return this.view.outPutHTML();
   }
 
+  public void redirector(HttpData httpData, String path){
+    httpData.header.set("Location", path);
+    httpData.status = 301;
+  }
+
 }
