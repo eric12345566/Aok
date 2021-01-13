@@ -3,6 +3,7 @@ package App.Curriculum;
 import Aok.AokController;
 import Aok.AokModel;
 import Aok.HttpData;
+import App.Data.CurriculumViewData;
 
 public class CurriculumController extends AokController {
     CurriculumModel model;

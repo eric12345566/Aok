@@ -31,13 +31,13 @@ public class AppMain {
 
         /* Curriculum */
         AokController curriculumController = new CurriculumController();
-        AokView curriculumView = new CurriculumView("coursetable.html");
+        AokView curriculumView = new CurriculumView("coursetable.ftl");
         AokModel curriculumModel = new CurriculumModel();
         AokRouter curriculumRouter = new AokRouter();
 
         curriculumController.setModel(curriculumModel);
         curriculumController.setView(curriculumView);
-        loginModel.addView(curriculumView);
+        curriculumModel.addView(curriculumView);
         curriculumRouter.setController(curriculumController);
         aok.addRouter("/curriculum", curriculumRouter);
 

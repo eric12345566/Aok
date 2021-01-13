@@ -15,7 +15,19 @@ public class Curriculum extends AokData {
         this.classNo = classNo;
     }
 
-    public String getSubjectName(){
-        return this.subjectName;
+    public String getSubjectName() {
+        return subjectName;
+    }
+
+    public int getWeek() {
+        return week;
+    }
+
+    public int getSection() {
+        return section;
+    }
+
+    public String getClassNo() {
+        return classNo;
     }
 }

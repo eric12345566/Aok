@@ -1,6 +1,7 @@
 package App.Curriculum;
 
 import Aok.AokView;
+import App.Data.CurriculumViewData;
 
 public class CurriculumView extends AokView {
     public CurriculumView(String templateFileName) {
@@ -9,7 +10,8 @@ public class CurriculumView extends AokView {
 
     @Override
     public String outPutHTML() {
-        input.put("courseObj", this.dataObj);
+        System.out.println(this.dataObj);
+        input.put("data", this.dataObj);
         return getTemplate();
     }
 }

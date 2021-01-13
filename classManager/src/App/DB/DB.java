@@ -32,6 +32,14 @@ public class DB {
     /* Curriculum */
     Curriculum[][] table = new Curriculum[5][10];
 
+    public void initCourseTable(){
+        for(int i=0; i<5; i++){
+            for(int j=0; j<10; j++){
+                table[i][j] = new Curriculum("", i, j, "資訊三丙");
+            }
+        }
+    }
+
     public void addClass(String subject, int week, int section, String classNo){
         table[week-1][section-1] = new Curriculum(subject, week, section, classNo);
     }

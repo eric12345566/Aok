@@ -65,186 +65,83 @@
                         <hr>
                         <div class="container">
                             <div class="fluid-row">
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
+                                <#list data.week1 as w1> 
+                                    <div class="col-xs-1">
+                                        ${w1.subjectName}
+                                    </div>
+                                </#list>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="row toggle" id="dropdown-detail-2" data-toggle="detail-2">
-                        <div class="col-md-10">
-                            星期二
-                        </div>
+                        <div class="col-md-10"> 星期二 </div>
                         <div class="col-md-2"><i class="fa fa-chevron-down fa-pull-right fa-border"></i></div>
                     </div>
-                    <div id="detail-2">
+                    <div id="detail-1">
                         <hr>
                         <div class="container">
                             <div class="fluid-row">
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
+                                <#list data.week2 as w2> 
+                                    <div class="col-xs-1">
+                                        ${w2.subjectName}
+                                    </div>
+                                </#list>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="row toggle" id="dropdown-detail-3" data-toggle="detail-3">
-                        <div class="col-md-10">
-                            星期三
-                        </div>
+                        <div class="col-md-10"> 星期三 </div>
                         <div class="col-md-2"><i class="fa fa-chevron-down fa-pull-right fa-border"></i></div>
                     </div>
-                    <div id="detail-3">
+                    <div id="detail-1">
                         <hr>
                         <div class="container">
                             <div class="fluid-row">
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
+                                <#list data.week3 as week3> 
+                                    <div class="col-xs-1">
+                                        ${week3.subjectName}
+                                    </div>
+                                </#list>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="row toggle" id="dropdown-detail-4" data-toggle="detail-4">
-                        <div class="col-md-10">
-                            星期四
-                        </div>
+                        <div class="col-md-10"> 星期四 </div>
                         <div class="col-md-2"><i class="fa fa-chevron-down fa-pull-right fa-border"></i></div>
                     </div>
-                    <div id="detail-4">
+                    <div id="detail-1">
                         <hr>
                         <div class="container">
                             <div class="fluid-row">
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
+                                <#list data.week4 as week4> 
+                                    <div class="col-xs-1">
+                                        ${week4.subjectName}
+                                    </div>
+                                </#list>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li class="list-group-item">
                     <div class="row toggle" id="dropdown-detail-5" data-toggle="detail-5">
-                        <div class="col-md-10">
-                            星期五
-                        </div>
+                        <div class="col-md-10"> 星期五 </div>
                         <div class="col-md-2"><i class="fa fa-chevron-down fa-pull-right fa-border"></i></div>
                     </div>
-                    <div id="detail-5">
+                    <div id="detail-1">
                         <hr>
                         <div class="container">
                             <div class="fluid-row">
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
-                                <div class="col-xs-1">
-                                    Detail:
-                                </div>
-                                <div class="col-xs-5">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </div>
+                                <#list data.week5 as week5> 
+                                    <div class="col-xs-1">
+                                        ${week5.subjectName}
+                                    </div>
+                                </#list>
                             </div>
                         </div>
                     </div>
