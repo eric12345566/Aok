@@ -17,7 +17,6 @@ public class HttpData {
   public ContentType type = null;
   
   public Map<String, String> queryToMap(String query) {
-      System.out.println("queryToMap:" + query);
     Map<String, String> result = new HashMap<>();
     for (String param : query.split("&")) {
         String[] entry = param.split("=");

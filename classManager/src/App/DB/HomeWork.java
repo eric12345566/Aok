@@ -1,6 +1,8 @@
 package App.DB;
 
-public class HomeWork {
+import Aok.AokData;
+
+public class HomeWork extends AokData {
     String homeWorkName;
     String classNo;
 
