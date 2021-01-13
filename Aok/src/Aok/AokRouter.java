@@ -12,7 +12,7 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
 public class AokRouter implements HttpHandler {
-  AokController ctr = new AokController();
+  AokController ctr;
   HttpData request = new HttpData();
   HttpData response = new HttpData();
   @Override
