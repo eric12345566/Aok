@@ -23,6 +23,7 @@ public class Aok {
     }
 
     public void startServer(){
+        server.createContext("/assets", new AssetsRouter());
         server.start();
         System.out.println("<AoK> Starting Server at port: " + port);
     }

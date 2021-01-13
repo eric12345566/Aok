@@ -7,5 +7,6 @@ public class TestController extends AokController {
 
     @Override
     public void setModel(AokModel m) {
+
     }
 }
