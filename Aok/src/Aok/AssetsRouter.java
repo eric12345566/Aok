@@ -23,16 +23,15 @@ public class AssetsRouter extends AokRouter implements HttpHandler{
 		// TODO Auto-generated method stub
 		request.header = exchange.getRequestHeaders();
 	    response.header = exchange.getResponseHeaders();
-		
+		response.status = 200;
 	    if("GET".equals(exchange.getRequestMethod())) {
+
 	        if(exchange.getRequestURI().getQuery() != null)
 	          request.query = request.queryToMap(exchange.getRequestURI().getQuery());
-	        response = ctr.Get(request, response);
 	        fileName = exchange.getRequestURI().getPath();
 	    	if(fileName.startsWith("/")==true)
                 fileName = fileName.substring(8);
-	    	fileName = "AoK/src/Assets/" + fileName;
-	    	System.out.println(fileName);
+	    	fileName = "./src/Assets/" + fileName;
 	    }
 	    OutputStream outputStream = exchange.getResponseBody();
 	    
@@ -49,9 +48,11 @@ public class AssetsRouter extends AokRouter implements HttpHandler{
             System.out.println("Sending data completely.");
         }
 	    else if (fileName.endsWith(".html") ) {
+			System.out.println("hello 1");
 	    	File file = new File(fileName);
         	InputStreamReader read = new InputStreamReader (new FileInputStream(file),"UTF-8");
         	BufferedReader br = new BufferedReader(read);
+        	System.out.println("hello 2");
     		String str = null;
     		String sumStr = "";
     		response.type = ContentType.html;
