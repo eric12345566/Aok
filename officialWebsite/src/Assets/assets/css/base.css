@@ -1,0 +1,18 @@
+.feature img {
+  margin-top: 1em;
+  width: 9em;
+}
+
+.get-start-card .image{
+    box-shadow: 0px 0.0375em 0.125em 0px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.get-start-card a{
+    text-decoration: none;
+}
+
+.get-start-card .image:hover {
+    
+    box-shadow: 0px 1em 1em 0px rgba(0, 0, 0, 0.15);
+}
