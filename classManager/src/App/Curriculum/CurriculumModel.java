@@ -11,7 +11,6 @@ public class CurriculumModel extends AokModel {
 
     public CurriculumModel(){
         this.db = DB.getInstance();
-        this.db.initCourseTable();
         db.addClass("物件導向軟體工程", 1, 1, "資訊三丙");
         db.addClass("物件導向軟體工程", 1, 2, "資訊三丙");
         db.addClass("英文", 3, 3, "資訊三丙");
