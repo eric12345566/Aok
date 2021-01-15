@@ -5,12 +5,19 @@ import java.util.*;
 
 import freemarker.template.*;
 
+/**
+ * AokView 負責處理網頁模版，也就是動態網頁的工作。使用的是 Freemarker Template Engine。
+ */
 public abstract class AokView implements Observer{
     protected static Configuration cfg;
     protected Map<String, Object> input = new HashMap<String, Object>();
     protected String templateFileName;
     protected Object dataObj;
 
+    /**
+     * AokView 建構子，可以直接帶入 template 檔案名稱
+     * @param templateFileName template 檔案名稱，儲存在 templates 資料夾裡
+     */
     public AokView(String templateFileName){
 
         // Configure FreeMarker
@@ -32,6 +39,10 @@ public abstract class AokView implements Observer{
         cfg.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
     }
 
+    /**
+     * 生成已經綁定資料到模板的字串輸出
+     * @return 已綁定資料的頁面
+     */
     public String getTemplate(){
         Template template = null;
 
@@ -67,11 +78,20 @@ public abstract class AokView implements Observer{
         return sw.toString();
     }
 
+    /**
+     * Observer 收到通知後的處理函式
+     * @param o 互叫的 Observable 物件
+     * @param arg 傳送的物件
+     */
     @Override
     public void update(Observable o, Object arg) {
         this.dataObj = arg;
     }
 
+    /**
+     * 使用者可自行定義的資料綁定方法
+     * @return 通常會配合getTemplate()使用，直接傳出已綁定好資料的 template
+     */
     public abstract String outPutHTML();
 
 }
