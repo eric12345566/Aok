@@ -11,10 +11,21 @@ import java.util.*;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
+/**
+ * 主要負責每個路由的資料處理，當 client 傳送請求到某個路由來，將由此路由先前註冊的 AokRouter
+ * 來處理後續如 GET、POST 等 Http Method 以及呼叫 AokController 來處理傳入請求。
+ */
 public class AokRouter implements HttpHandler {
   AokController ctr;
   HttpData request = new HttpData();
   HttpData response = new HttpData();
+
+  /**
+   * 為實作 HttpHandler 的方法，當路由接收到請求的處理演算法在此方法中定義。
+   * 其中使用 AokController 作為 Stretagy。其中的 HTTP Method 演算法由 AokController 提供。
+   * @param exchange 包括所有請求資料
+   * @throws IOException 當發生錯誤時的拋出
+   */
   @Override
   public void handle(HttpExchange exchange) throws IOException {
     request = new HttpData();
@@ -62,10 +73,20 @@ public class AokRouter implements HttpHandler {
     
   }
 
+  /**
+   * 設定 Controller 屬性
+   * @param ctr 傳入要設定的 AokController
+   */
   public void setController(AokController ctr){
     this.ctr = ctr;
   }
-  
+
+  /**
+   * 把request中的body由InputStream轉為String。
+   * @param is request 的 InputStream
+   * @return request中的body字串
+   * @throws IOException
+   */
   private String is2string(InputStream is) throws IOException {
     final int bufferSize = 1024;
     final char[] buffer = new char[bufferSize];
@@ -80,6 +101,11 @@ public class AokRouter implements HttpHandler {
     return out.toString();
   }
 
+  /**
+   * 把request header中的entrySet()轉換成map的形式。
+   * @param set 要設定的request
+   * @return map 形態的 request header
+   */
   public Map<String, List<String>> setToMap(Set set) {
     Iterator<Map.Entry<String, List<String>>> itr = set.iterator();
     Map<String, List<String>> map = new HashMap<>();
@@ -89,7 +115,10 @@ public class AokRouter implements HttpHandler {
     }
     return map;
   }
-  
+
+  /**
+   * 根據 response 屬性，可以知道此次返回的 Content Type 為何，並且賦予適當的header，讓Server可以成功執行
+   */
   public void setContentType() {
     if(this.response.type == ContentType.json)
       response.header.set("Content-Type", "application/json; charset=utf-8");

@@ -12,12 +12,21 @@ import java.io.OutputStream;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
+/**
+ * 主要負責處理靜態檔案，檔案路徑預設在該project下層的資料夾下(AoK/src/Assets/檔案名稱)，
+ * 像是html、css、jpg….等型態的檔案。
+ */
 public class AssetsRouter extends AokRouter implements HttpHandler{
 	
 	String fileName;
 	HttpData request = new HttpData();
 	HttpData response = new HttpData();
-	
+
+	/**
+	 * 在 HttpHandler GET 到靜態檔案時做處理，並將資料response給Server
+	 * @param exchange 包括所有請求資料
+	 * @throws IOException 當發生錯誤時的拋出
+	 */
 	@Override
 	public void handle(HttpExchange exchange) throws IOException {
 		// TODO Auto-generated method stub
@@ -105,7 +114,12 @@ public class AssetsRouter extends AokRouter implements HttpHandler{
 	    outputStream.flush();
 	    outputStream.close();
 	}
-	
+
+	/**
+	 * 負責做靜態檔案的字串處理
+	 * @param s 預處理的字串
+	 * @return 處理完愁的字串
+	 */
 	public static String process(String s) {
 		StringBuilder sb = new StringBuilder();
 		char[] ch = new char[200];
